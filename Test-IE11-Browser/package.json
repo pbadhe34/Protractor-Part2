@@ -1,0 +1,25 @@
+{
+ "name": "protractor-ie-test",
+ "dependencies": { 
+  "protractor": "5.1.2"
+ },
+ "scripts": {
+  "version": "protractor --version",  
+   
+  "update-test": "webdriver-manager start --help",
+
+
+  "update-ie": "webdriver-manager update --ie --versions.standalone 3.4.0 --versions.ie 3.4.0",
+
+  "update-ie32": "webdriver-manager --ignore_ssl update --ie32",
+  
+  "web-start": "webdriver-manager start --versions.standalone 3.4.0  --versions.ie=3.4.0",
+
+  "start": "webdriver-manager start --versions.ie 3.4.0",
+  "clean": "webdriver-manager clean",
+  "test": "protractor conf.js", 
+  "test-ie": "protractor conf-ie.js",
+  "jasmine": "jasmine version",
+  "mgr": "webdriver-manager version"
+ }
+}

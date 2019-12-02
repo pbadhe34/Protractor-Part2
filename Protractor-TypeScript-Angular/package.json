@@ -1,0 +1,23 @@
+{
+  "name": "protractor-typescript",
+  "version": "1.0.0",
+  "scripts": {
+    "debug": "node --inspect-brk ./node_modules/.bin/protractor conf.js",
+    "pretest": "npm run tsc-run && npm run webdriver-update",
+    "test": "protractor conf.js",
+    "tsc-run": "tsc",
+     "tsc-list": "tsc --listFiles",
+     "tsc-trace": "tsc --traceResolution",
+    "webdriver-update": "webdriver-manager update --standalone=false --gecko=false"
+  },
+  "dependencies": {
+    "@types/jasmine": "^3.3.12",
+    "jasmine": "^3.3.1",
+    "protractor": "5.4.2",
+    "ts-node": "^8.0.3",
+    "typescript": "*"
+  },
+  "devDependencies": {
+    "@types/selenium-webdriver": "^4.0.0"
+  }
+}

@@ -1,0 +1,64 @@
+<!doctype html>
+<htmlng-app='textEditor'>
+  <head>
+ 
+  
+    <title>The Jasmine Unit Test Runner Page</title>      
+    
+
+<!--Include the Jasmins Test runner Framework CSS-->
+
+     <link rel="stylesheet" type="text/css" href="lib/jasmine-2.0.0/jasmine.css">
+
+<!--Include the Jasmins Test runner Framework-->
+
+    <script type="text/javascript" src="lib/jasmine-2.0.0/jasmine.js"></script>
+
+<!--Include the Jasmins Test HTML Reporter Framework-->
+
+    <script type="text/javascript" src="lib/jasmine-2.0.0/jasmine-html.js"></script>
+
+<!--Include the Jasmins Test Runner Framework-->
+
+    <script type="text/javascript" src="lib/jasmine-2.0.0/boot.js"></script>
+
+
+  <!--Include the angular JS base Framework-->
+
+        
+   <script src="lib/angular/angular.js"></script> 
+   <script src="lib/angular/angular-route.js"></script>
+
+   <script src="lib/angular/angular-resource.js"></script>
+
+  
+
+  <!--Include the angular JS mocks Framework to simulate  the angular context-->
+  
+   <script src="lib/angular/angular-mocks.js"></script>
+   
+   
+   <!--Include the app js files-->
+
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+
+     <script src="js/filters.js"></script>
+     <script src="js/services.js"></script>
+
+  <!--Include the unit test spec files-->
+   <script src="unitTest-specs/controllersSpec.js"></script>
+  <script src="unitTest-specs/directivesSpec.js"></script>  
+
+  <script src="unitTest-specs/filtersSpec.js"></script>   
+  <script src="unitTest-specs/servicesSpec.js"></script>      
+   
+     
+     
+  </head>
+  <body>
+   <h1>This is the Jasmine Unit test Page with Jasmine Test Runner</h1>
+  
+  
+  </body>
+</html>

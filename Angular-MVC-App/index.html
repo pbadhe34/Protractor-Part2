@@ -1,0 +1,99 @@
+<!doctype html>
+<html ng-app="contactManager">
+<head>  
+  <title>Angular Contact Manager MVC Routing App</title>
+</head>
+<body ng-controller="AppCtrl">
+  <h1>AngularJS Contact Manager MVC Application with Routing</h1>
+  [<a href="#/">index</a>]
+  <div ng-view></div>
+  
+  <script src="angular.js"></script>
+   <script src="angular-route.js"></script>
+
+
+  <script>
+
+   
+  var contactManager = angular.module('contactManager', ['ngRoute']);
+
+  //configure the request routing with pages
+  contactManager.config(function($routeProvider) {
+    $routeProvider.when('/index', {
+      templateUrl: 'partials/index.html'
+    })
+    .when('/info/:id', {
+      templateUrl: 'partials/info.html',
+      controller: 'InfoCtrl'
+    })
+    .when('/add', {
+      templateUrl: 'partials/add.html',
+      controller: 'AddCtrl'
+    })
+    .when('/edit/:id', {
+      templateUrl: 'partials/edit.html',
+      controller: 'EditCtrl'
+    })
+    .when('/remove/:id', {
+      templateUrl: 'partials/remove.html',
+      controller: 'RemoveCtrl'
+    })
+    .otherwise({
+      redirectTo: '/index'
+    });
+  });
+
+
+contactManager.controller('AppCtrl',
+  function AppCtrl ($scope) {
+    $scope.contacts = [{
+      name: 'Vijay Marva',
+      phone: '+91-20-24456543',
+      address: [
+        '1034, M. G. Road',
+        '7th Cross Lane, Bangalore-43'
+      ]
+    }];
+  });
+
+contactManager.controller('InfoCtrl',
+  function InfoCtrl($scope, $routeParams) {
+    $scope.contact = $scope.contacts[$routeParams.id];
+  });
+
+contactManager.controller('AddCtrl',
+  function AddCtrl($scope, $location) {
+    $scope.contact = {};
+    $scope.add = function () {
+      $scope.contacts.push($scope.contact);
+      $location.url('/');
+    };
+  });
+
+contactManager.controller('EditCtrl',
+  function EditCtrl($scope, $routeParams, $location) {
+    $scope.contact = $scope.contacts[$routeParams.id];
+    $scope.edit = function () {
+      $scope.contacts[$routeParams.id] = $scope.contact;
+      $location.url('/');
+    };
+  });
+
+contactManager.controller('RemoveCtrl',
+  function RemoveCtrl($scope, $routeParams, $location) {
+    $scope.contact = $scope.contacts[$routeParams.id];
+    $scope.remove = function () {
+      $scope.contacts.splice($routeParams.id, 1);
+      $location.url('/');
+    };
+    $scope.back = function () {
+      $location.url('/');
+    };
+  });
+
+
+
+</script>
+   
+</body>
+</html>

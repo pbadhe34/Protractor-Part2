@@ -1,0 +1,64 @@
+    <form name="myForm">
+    <div class="control-group" ng-class="{error: myForm.firstName.$invalid}">
+    <label>Customer Name</label>
+    <input type="text" name="firstName" ng-model="customer.firstName" required>
+    <span ng-show="myForm.firstName.$error.required" class="help-inline">
+    Required</span>
+    </div>
+     
+    <div class="control-group" ng-class="{error: myForm.lastName.$invalid}">
+    <label>Last Name</label>
+    <input type="text" name="lastName" ng-model="customer.lastName" required>
+    <span ng-show="myForm.lastName.$error.required" class="help-inline">
+    Required</span>     
+    </div>
+     
+    <div class="control-group" ng-class="{error: myForm.street.$invalid}">    
+    <label>Street Address</label>
+    <input type="text" name="street" ng-model="customer.street" required>
+    <span ng-show="myForm.street.$error.required" class="help-inline">
+    Required</span>     
+    </div> 
+    
+    <div class="control-group" ng-class="{error: myForm.lastName.$invalid}">
+    <label>City</label>
+    <input type="text" name="city" ng-model="customer.city" required>
+    <span ng-show="myForm.city.$error.required" class="help-inline">
+    Required</span>     
+    </div>
+    
+    <div class="control-group" ng-class="{error: myForm.state.$invalid}">
+    <label>State</label>
+    <input type="text" name="state" ng-model="customer.state" required>
+    <span ng-show="myForm.state.$error.required" class="help-inline">
+    Required</span>     
+    </div>
+    
+     <div class="control-group" ng-class="{error: myForm.zip.$invalid}">
+    <label>Zip Code</label>
+    <input type="text" name="zip" ng-model="customer.zip" required>
+    <span ng-show="myForm.zip.$error.required" class="help-inline">
+    Required</span>     
+    </div>
+    
+    <div class="control-group" ng-class="{error: myForm.country.$invalid}">
+    <label>Country</label>
+    <input type="text" name="country" ng-model="customer.country" required>
+    <span ng-show="myForm.country.$error.required" class="help-inline">
+    Required</span>     
+    </div>
+    
+     
+    <br>
+    
+     <!-- Enable this button only in edit mode -->
+    <button ng-click="updateCustomer()" ng-show="customer.id"  ng-disabled="isClean() || myForm.$invalid"
+    class="btn btn-primary">Update</button>
+    
+    <button ng-click="addCustomer()" ng-show="customer.id==undefined"  ng-disabled="myForm.$invalid"
+    class="btn btn-primary">Add</button>
+    
+    <!-- Enable this button only in edit mode -->
+    <button ng-click="destroy()"  ng-show="cust.id" class="btn btn-danger">Delete</button>
+    <a href="#/" class="btn">Cancel</a>
+    </form>

@@ -1,0 +1,27 @@
+{
+ "name": "protractor-test",
+ "dependencies": {   
+  "protractor": "5.1.2"
+ },
+ "scripts": {
+  "version": "protractor",
+  "prot": "protractor",
+  "web": "webdriver-manager version",
+  "clean": "webdriver-manager clean",
+  "update": "webdriver-manager update",
+  "updateFF": "webdriver-manager update --versions.gecko=v0.25.0",
+  "update2": "webdriver-manager update --standalone --versions.gecko=v0.25.0",
+  "update-ie": "webdriver-manager update --ie",
+  "update-ie64": "webdriver-manager update --ie64",
+  "web-start": "webdriver-manager start --versions.gecko=v0.25.0",
+  "ssl1": "webdriver-manager --ignore_ssl update --ie32",
+  "ssl2": "webdriver-manager --ignore_ssl update --ie64",
+  "test": "protractor conf.js",
+  "test-ff1": "protractor conf-FF.js --logLevel=DEBUG",
+  "test-ff2": "protractor conf-FF2.js",
+  "test-ffD": "protractor conf-FF2.js --stacktrace --logLevel=DEBUG --verbose",
+  "test-ie": "protractor conf-ie.js",
+  "jasmine": "jasmine version",
+  "mgr": "webdriver-manager version"
+ }
+}

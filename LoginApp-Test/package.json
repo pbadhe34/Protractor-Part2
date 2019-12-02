@@ -1,0 +1,20 @@
+{
+  "name": "protractor-test-demo",
+  "version": "1.0.0",
+  "description": "Test Project for LoginApp",   
+  "devDependencies": {
+    "jasmine-reporters": "^2.0.0",
+    "protractor": "5.1.2",
+    "protractor-html-screenshot-reporter": "0.0.21",
+    "protractor-jasmine2-html-reporter": "0.0.6"
+  },
+  "scripts": {
+    "readVersion": "Protractor --version",
+    "test": "Protractor Config.js",
+    "testWithReport": "Protractor Config-Report.js",
+    "updateDriver": "webdriver-manager update",
+    "updateDriver2": "webdriver-manager update --standalone",
+    "updateIEDriver": "webdriver-manager update --ie", 
+    "start-selenium": "webdriver-manager start"
+  }
+}

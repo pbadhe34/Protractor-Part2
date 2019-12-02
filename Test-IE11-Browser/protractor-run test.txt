@@ -1,0 +1,71 @@
+   
+work around it by specifying the exact chrome version when updating the drivers:
+webdriver-manager update --versions.chrome=73.0.3683.86
+
+
+   This works..
+  webdriver-manager --ignore_ssl update --ie64 --versions.ie=3.141.0
+
+  webdriver-manager start  --ie64 --versions.ie=3.141.0
+
+  THe below doesnot work..
+
+  webdriver-manager --ignore_ssl update --ie64 --versions.ie=3.150.0
+
+  webdriver-manager start  --ie64 --versions.ie=3.150.0
+  
+https://selenium-release.storage.googleapis.com/3.150/IEDriverServer_x64_3.150.0.zip
+
+
+
+
+ 
+ 
+https://selenium-release.storage.googleapis.com/
+3.150/IEDriverServer_Win32_3.150.1.zip
+
+https://selenium-release.storage.googleapis.com/3.
+150/IEDriverServer_Win32_3.150.1.zip
+
+https://selenium-release.storage.googleapis.com/3.141/IEDriverServer_x64_3.141.0.zip
+
+
+ 
+
+The webdriver-manager is a helper tool to easily get an 
+instance of a Selenium Server 
+running. 
+Use the following to download the necessary binaries with: 
+
+To Install the selenium webdriver, type the command 
+
+'webdriver-manager update' in command prompt
+
+webdriver-manager update --standalone 
+
+To Run the protractor  test with selenium server
+
+ Start the selenimum server
+ 
+ webdriver-manager start
+ 
+
+ 
+  
+ Without global/external selenium server ..using local selenimum instance set thise in conf
+
+
+   localSeleniumStandaloneOpts: {
+    jvmArgs: [
+      '-Dwebdriver.ie.driver=./IEDriverServer3.4.0.exe'
+    ]
+  },   
+
+ //chrome as headless browser
+
+  capabilities: {
+    'browserName': 'internet explorer',
+     version: 'ANY'
+      
+  }
+

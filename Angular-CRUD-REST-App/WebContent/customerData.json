@@ -1,0 +1,4 @@
+[
+ {"id":"1","firstName":"Kaka","lastName":"More","street":"Shanti Street","city":"Pune","state":"magadha","zip":"1222","country":"India"},
+ {"id":"2","firstName":"Maya","lastName":"Jadhav","street":"M G Road","city":"Indore","state":"MP","zip":"3456","country":"Brazil"}
+ ]

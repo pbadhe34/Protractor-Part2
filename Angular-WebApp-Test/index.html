@@ -1,0 +1,29 @@
+<html ng-app="cspScriptModule">
+<head>
+
+<script src="angular.js"></script>
+<script src="script.js"></script>
+</head>
+
+<body>
+<div ng-controller="MainController as ctrl">
+  <div>
+    <button ng-click="ctrl.inc()" id="inc">Increment</button>
+    <span id="counter">
+      {{ctrl.counter}}
+    </span>
+  </div>
+
+  <div>
+    <input ng-model="ctrl.snippet"/></br>
+    <button ng-click="ctrl.evil()" id="evil">Evaluate</button>
+    <span id="evilError">
+      {{ctrl.evilError}}
+    </span>
+  </div>
+  <div ng-bind="ctrl.result"/>
+</div>
+</body>
+
+</html>
+

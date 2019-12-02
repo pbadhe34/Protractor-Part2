@@ -1,0 +1,65 @@
+  
+Install individual packages
+npm install http-server --save-dev 
+
+npm install protractor --save-dev 
+
+npm install  protractor-html-screenshot-reporter --save-dev
+
+
+ Install all packages with singlke command : npm install
+
+chexk the protractor  version
+
+protractor --version
+
+
+The webdriver-manager is a helper tool to easily get an 
+instance of a Selenium Server 
+running. 
+Use the following to download the necessary binaries with: 
+
+To Install the selenium webdriver, type the command 
+
+'webdriver-manager update' in command prompt
+
+webdriver-manager update --standalone 
+
+ Start the selenimum server
+ 
+webdriver-manager start
+
+
+ Run the protractor  test
+
+ protractor conf.js
+
+ For runnimg the test in IE browser
+ Get the IE browser driver and save it globally
+
+ webdriver-manager update --ie
+ 
+ Without global/external selenium server ..using local
+ selenimum instance set thise in conf
+
+
+   localSeleniumStandaloneOpts: {
+    jvmArgs: [
+      '-Dwebdriver.ie.driver=./IEDriverServer3.4.0.exe'
+    ]
+  },   
+
+ //chrome as headless browser
+
+  capabilities: {
+    'browserName': 'internet explorer',
+     version: 'ANY'
+      
+  }
+
+
+  
+
+
+
+

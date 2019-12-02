@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+<head>
+<link rel="stylesheet" href="css/bootstrap.min.css"> 
+</head>
+<body>  
+    <table>
+ <tr><td><input type="text" ng-model="search" class="search-query" placeholder="Search"></td>
+
+  <td><div><a href="#/customers/">Add New Customer<i class="icon-plus-sign"></i></a></div></td> 
+  </tr>
+ </table>
+<table border='1'>
+	<thead>
+		<tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Street Address</th>
+			<th>City Name</th>
+			<th>State Name </th>
+			<th> Zip Code </th>
+			<th> Country of Pride</th>	
+					
+		</tr>
+	</thead> 
+	<tbody>
+	 <tr ng-repeat="cust in customers | filter:search | orderBy:firstName">
+			<td>{{cust.firstName}}</td>
+			<td>{{cust.lastName}}</td>
+			<td>{{cust.street}}</td>
+			<td>{{cust.city}}</td>
+			<td>{{cust.state}}</td>
+			<td>{{cust.zip}}</td>
+			<td>{{cust.country}} 
+			 		
+			 <a href="#/customers/{{cust.id}}"><i>Edit<i class="icon-pencil"></i></a>
+			 <a class="btn btn-danger"  ng-click="deleteCustomer(cust)">Delete<i class="icon-minus-sign"></i></a> 
+			  </td>
+			 		 
+		</tr>
+
+	</tbody>
+</table>
+ 
+</body>
+</html>

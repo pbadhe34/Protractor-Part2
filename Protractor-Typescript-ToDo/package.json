@@ -1,0 +1,27 @@
+{
+  "name": "protractor-test-app",
+  "version": "1.0.0",
+  "main": "Config.js",
+  "dependencies": {},
+
+  "devDependencies": {
+    "@types/jasmine": "2.5.41",
+    "@types/jasminewd2": "^2.0.0",
+     "jasmine": "^2.4.1",
+    "typescript": "~2.0.0",
+    "jasmine-reporters": "^2.0.0",
+    "protractor": "5.1.2",
+    "protractor-html-screenshot-reporter": "0.0.21",
+    "protractor-jasmine2-html-reporter": "0.0.6",
+    "http-server": "^0.9.0"
+  },
+  "scripts": {
+    "build-spec": "tsc conf.ts",
+   "start": "http-server -p 8090"
+   "build-conf": "tsc spec.ts",
+    "build": "tsc",
+    "test": "Protractor tmp/conf.js",
+    "version": "Protractor --version",
+    "update-driver": "webdriver-manager update"
+  }
+}

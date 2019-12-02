@@ -1,0 +1,12 @@
+node --inspect node_modules/protractor/bin/protractor conf-ie.js
+
+  To debug the protrcator script
+
+    node --inspect-brk  node_modules/protractor/bin/protractor conf-ie.js
+
+
+Open chrome inspector: 
+  Enter "chrome://inspect/#devices" in browser,
+  find  the current running target  and click inspect link to 
+  open the debugger in chrome
+ 

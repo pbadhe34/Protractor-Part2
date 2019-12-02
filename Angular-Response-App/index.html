@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>   
+  <title>Dynmaic Response test</title>
+  <link rel="stylesheet" href="bootstrap.css"/>
+</head>
+<body ng-controller="HomeController as vm">
+
+  <div class="container">
+
+    <button ng-click="vm.toggleMessage()" class="btn btn-primary btn-lg">
+ <span ng-show="vm.messageVisible">Hide </span><span ng-hide="vm.messageVisible">Show </span> message</button>
+
+    <h1 ng-show="vm.messageVisible">{{vm.message}}</h1>
+
+  </div>
+   
+  <script src="angular.js"></script>
+
+  <script src="app.js"></script>
+
+</body>
+</html>

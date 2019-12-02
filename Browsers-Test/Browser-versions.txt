@@ -1,0 +1,7 @@
+Firefox Mozill version
+70.0.1 (64-bit)
+
+  IE Version
+  11.706.17134.0
+  OLD downloads for node js
+  https://nodejs.org/download/release/ 

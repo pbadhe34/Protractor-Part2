@@ -1,0 +1,30 @@
+  
+
+npm install -g protractor : to install globally
+
+
+npm install protractor  --save-dev : to install locally
+
+configure the path to include the protractor.cmd on path 
+from current dir/node_modules/.bin;
+
+set path=%path%;./node_modules/.bin;
+
+protractor --version
+
+The webdriver-manager is a helper tool to easily get an instance of a Selenium Server 
+running. Use the following to download the necessary binaries with: 
+
+To Install the selenium webdriver, type the command 
+
+'webdriver-manager update' in command prompt
+
+To generate the test report
+Install the protractor-html-screenshot-reporter module  via npm:
+
+npm install protractor-html-screenshot-reporter --save-dev
+
+npm install -g protractor-html-screenshot-reporter : globally
+
+
+

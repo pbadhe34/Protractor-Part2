@@ -1,0 +1,47 @@
+To run the Selenium server manually, then run the following command
+ 
+	
+java -jar selenium-server-standalone-2.53.1.jar -Dwebdriver.chrome.driver=chromedriver_2.22.exe
+
+OR 
+Now start up a selenimum server with:
+
+webdriver-manager start
+
+This will start up a Selenium Server and will output a bunch of info logs.
+Your Protractor test will send requests to this server to control a local browser.
+ You can see information about the status of the server at http://localhost:4444/wd/hub.
+ 
+
+The Protractor test can be executed without running a Selenium server and using chromeDriver configuration
+
+In Protractor Config JS, add the following property:
+
+chromeDriver: ‘<PATH TO Chrome Driver EXE>'
+
+chromeDriver: 'chromedriver.exe'
+
+To run the protractor  tests. Type the following command
+ 
+	
+protractor config.js
+
+Yo will see the test execution progress and its status on the command line and also generate the 
+test reports in XML format.
+
+
+To generate the test report in html format create a report output directory inside the project folder 
+and specify the report output directory name in the configuration file. 
+Add the following code into the configuration file
+
+
+
+
+protractor conf.js
+
+ 
+   
+    
+
+
+

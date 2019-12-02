@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app='MyModule' >
+<head> 
+<title>Angular Module Page</title>
+<script type="text/javascript"  src="angular.js"></script>
+</head>
+<body>
+<h1>This is angular module page</h1>
+<h2>This is the first section</h2>
+<div ng-controller="TestController" >
+First AngularJs Expression : {{ 45 + 83}}
+
+<p></p>
+Enter data : <input ng-model='data'/>
+<p></p>
+
+The local data here is  {{data}}<p></p>
+
+
+
+Div Bound Data : <div id='divUser' ng-bind='data'></div>
+
+
+</div>
+<h2>This is the second section</h2>
+
+<p></p>The second section in first Module<p></p>
+<div ng-init="name='Asok'"  ng-app='MyModule'>
+The data avilable here is  {{data}}  <p></p>
+The global value avilable here is  {{value}}
+<p></p>
+The local name here is  {{name}} 
+
+</div>
+
+Second Angular Js Expression : {{ 11 + 23}}
+
+
+ 
+<script type="text/javascript">
+
+     var myModule = angular.module("MyModule",[]);
+     
+	myModule.controller("TestController",function($scope, $rootScope){
+			$scope.data = ''
+		     $rootScope.value = 345;
+		});	 
+
+
+
+</script>
+
+</body>
+</html>

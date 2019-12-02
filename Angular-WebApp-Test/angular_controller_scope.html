@@ -1,0 +1,53 @@
+    <!Doctype html>
+    <html >
+    
+    <head>        
+    
+       <script src="angular.js"></script>
+           <script src="scriptBind.js"></script>           
+          
+    </head>
+    
+     <body ng-app >
+      
+       
+    <!-- Assign the controller to current element and initialize scope for 
+         current dom element
+     -->
+    <div ng-controller ='TestController'>
+     <p>Name in first scope...</p>
+
+&lt;  HIOIII  &gt;
+
+
+       Hello, "{{name}}"!
+    </div>
+
+<p>The user name is , "{{name}}"!</P>
+
+
+<p>
+The Name here is   {{name}}!
+
+The user here is   {{user}}!
+
+ </p>
+
+    <hr></hr>
+     <!-- Assign the controller to current element and initialize scope for 
+         current dom element
+     -->
+     <div ng-controller="ListController">
+     <p>Name in second scope... </p>
+
+         Welcome-- {{name}}!
+
+    <p>The list of names defined here..</p>
+	    <ol>
+	    <!-- Iterate over the names in current scope -->
+	    <li ng-repeat="name in names">{{name}}</li>
+	    </ol>
+    </div>   
+    
+    </body>
+    </html>
