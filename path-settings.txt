@@ -1,0 +1,15 @@
+
+
+   
+  JAVA_HOME 
+  D:\jdk1.8.0_144
+
+  PATH
+
+  D:\jdk1.8.0_144\bin;C:\Program Files\Git\bin;
+
+
+  set CATALINA_HOME=C:\apache-tomcat-8.5.40\apache-tomcat-8.5.40
+
+
+   

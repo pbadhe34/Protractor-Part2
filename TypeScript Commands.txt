@@ -1,0 +1,15 @@
+
+tsc --help
+
+tsc --init  : To generate tsconfig.json
+ 
+ tsc -w usage.ts  : Run in watch mode
+tsc --noEmit usage.ts :No JS code generation
+
+tsc --noEmitOnError usage.ts :Prevent the JS code generation when error
+
+tsc --p tsconfig.json : compoile files from current dir with config 
+                        options from tsconfig.json
+
+To prevent js code generation in case of errors
+tsc --noEmitOnError usage.ts
